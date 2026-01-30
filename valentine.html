@@ -1,0 +1,168 @@
+<!valentine html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>for my riri<3</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #f4a6b8;
+
+        background-image:<img src="C:\Users\layan\OneDrive\Desktop\Modern Cute Valentines Day Ticket Coupon\Red Cute Illustrative Love Instagram Post.png">
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background: rgba(255, 240, 245, 0.75);
+        z-index: -1;
+    }
+
+    .container {
+        text-align: center;
+    }
+
+              img {
+            width: 450px;
+            margin: 15px;
+            border-radius: 15px;
+        }
+
+        button {
+            padding: 15px 25px;
+            font-size: 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+        }
+
+    .pink {
+        background-color: #f7c1cc;
+        color: white;
+    }
+
+    .light {
+        background-color: #fbd6de;
+        color: #d97b91;
+    }
+
+        #yesBtn {
+            background-color: #f7c1cc;
+            color: white;
+        }
+
+        #noBtn {
+            background-color: #fbd6de;
+            color: #d97b91;
+        }
+
+        #giftBtn {
+            background-color: #ffb3c6;
+            color: white;
+            display: none;
+        }
+
+        #message {
+            margin-top: 15px;
+            font-size: 18px;
+        }
+
+     #finalButtons,
+    #giftBtn,
+    #giftSection {
+        display: none;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Will you be my Valentine? <3</h1>
+   
+    <div id="buttons">
+        <button id="yesBtn">yes! </button>
+        <button id="noBtn">No💔 </button>
+    </div>
+
+    <p id="message"></p>
+
+    <div id="finalButtons">
+        <button class="pink" onclick="showGiftBtn()">Yes </button>
+        <button class="pink" onclick="showGiftBtn()">Yes baby!!! </button>
+    </div>
+
+ <!-- 🎁 GIFT BUTTON -->
+    <button id="giftBtn">Click to get your gift </button>
+
+    <!-- 🎁 GIFT IMAGES -->
+    <div id="giftSection">
+        <h2>Your gift <33 </h2>
+        <img src="C:\Users\layan\OneDrive\Desktop\Modern Cute Valentines Day Ticket Coupon\1.jpg">
+        <img src="C:\Users\layan\OneDrive\Desktop\Modern Cute Valentines Day Ticket Coupon\2.jpg">
+        <img src="C:\Users\layan\OneDrive\Desktop\Modern Cute Valentines Day Ticket Coupon\3.jpg">
+    </div>
+
+</div>
+
+    <script>
+        let clicks = 0;
+        let yesSize = 20;
+
+        const yesBtn = document.getElementById("yesBtn");
+        const noBtn = document.getElementById("noBtn");
+        const message = document.getElementById("message");
+        const firstButtons = document.getElementById("firstButtons");
+        const finalButtons = document.getElementById("finalButtons");
+        const giftBtn = document.getElementById("giftBtn");
+        const giftSection = document.getElementById("giftSection");
+        const buttons = document.getElementById("buttons");
+
+        function handleClick() {
+            clicks++;
+            yesSize += 10;
+            yesBtn.style.fontSize = yesSize + "px";
+
+            if (clicks === 1) {
+                message.innerText = "Are you sure babe? ";
+            } 
+            else if (clicks === 2) {
+                message.innerText = "I thought you loved me 💔";
+            } 
+            else if (clicks === 3) {
+                yesBtn.innerText = "Yes baby!!!!!!!! ";
+            }
+              else if (clicks === 4) {
+               message.innerText = "YAY!! I knew you would say YES!!!! ";
+                yesBtn.remove();
+                noBtn.remove();
+                giftBtn.style.display = "inline-block";
+            }
+        }
+
+        giftBtn.onclick = function () {
+            giftBtn.style.display = "none";
+            buttons.style.display = "none";
+            giftSection.style.display = "block";
+        };
+
+        yesBtn.onclick = handleClick;
+        noBtn.onclick = handleClick;
+    </script>
+
+</body>
+</html>
+
+
