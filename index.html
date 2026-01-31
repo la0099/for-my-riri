@@ -144,16 +144,16 @@
             else if (clicks === 3) {
                 yesBtn.innerText = "Yes baby!!!!!!!! ";
             }
-                 firstButtons.style.display = "none";
-            finalButtons.style.display = "block";
-        }
-
+                 
               else if (clicks === 4) {
                message.innerText = "YAY!! I knew you would say YES!!!! ";
                 yesBtn.remove();
                 noBtn.remove();
+                  firstButtons.style.display = "none";
+            finalButtons.style.display = "block";
+           }
+        }
                 giftBtn.style.display = "inline-block";
-            }
         }
 
         giftBtn.onclick = function () {
@@ -168,6 +168,7 @@
 
 </body>
 </html>
+
 
 
 
